@@ -1,0 +1,20 @@
+version: '3'
+services:
+  MyHomePage:
+    build: .
+    container_name: MyHomePage
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      # 挂载整个项目目录到容器内的 HTML 根目录
+      - .:/usr/share/nginx/html
+      # 如果需要持久化上传文件或日志，可以额外添加卷
+      #- ./data/uploads:/usr/share/nginx/html/uploads
+      #- ./data/logs:/var/log/nginx
+    networks:
+      - webnet
+
+networks:
+  webnet:
+    driver: bridge
