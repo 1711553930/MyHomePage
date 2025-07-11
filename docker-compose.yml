@@ -1,7 +1,7 @@
 services:
   MyHomePage:
     build: .
-    container_name: MyHomePage
+    container_name: myhomepageimg
     restart: unless-stopped
     ports:
       - "80:80"
