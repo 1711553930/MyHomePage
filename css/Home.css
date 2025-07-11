@@ -1,0 +1,42 @@
+/* 基础页面布局和背景设置 */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-size: cover;
+    background-position: center;
+}
+
+/* 针对#clock元素的样式 */
+#clock {
+    /* 基础样式 */
+    padding: 20px 40px;
+    font-size: 2rem;
+    color: white;
+    text-align: center; /* 文本居中 */
+
+    /* 毛玻璃效果 */
+    backdrop-filter: blur(1px); /* 初始毛玻璃模糊度 */
+    background-color: rgba(255, 255, 255, 0.1); /* 半透明背景 */
+    border-radius: 16px; /* 圆角弧度 */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    /* 过渡动画 */
+     transition: box-shadow 0.3s ease, backdrop-filter 0.8s ease;
+			  /* box-shadow 0.3s为鼠标碰到毛玻璃元素外边框发光效果的过渡动画时间
+				 backdrop-filter 0.8s ease 为鼠标碰到毛玻璃元素模糊度的过渡动画时间 */
+}
+
+/* 鼠标悬停时边缘发光且增大模糊 */
+#clock:hover {
+		/* 毛玻璃效果 */
+    box-shadow: 0 0 20px 6px rgba(255, 255, 255, 0.5);/* 鼠标碰到后,外边框变化最终值 */
+	backdrop-filter: blur(10px); /* 鼠标碰到后,毛玻璃的模糊度变化最终值 */
+	
+	
+	
+	
+}

@@ -3,39 +3,61 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
+		<link rel="stylesheet" href="./css/Home.css">
 	</head>
 	<body>
-		<h1>路漫漫其修远兮，吾将上下而求索</h1>
-		<h1>业余时间编写的个人主页</h1>
-		<h3>目前进度</h3>
-		<ul>
-			<li>已购买云服务器</li>
-			<li>已购买域名</li>
-			<li>已完成备案<</li>
-			<li>已部署博客</li>
-		</ul>
-		<h3>未完成项目</h3>
-		<ul>
-			<li>SSL加密证书</li>
-			<li>主页编写</li>
-			<li>Docker配置</li>
-		</ul>
-
-		<h2 ><a href="http://lichristmas.online:8090/">点击跳转我的博客</a></h2>
+		<div class="container">
+			<div>
+				<h1>路漫漫其修远兮，吾将上下而求索</h1>
+			</div>
+			<div>
+				<h1>业余时间编写的个人主页</h1>
+			</div>
+			<div>
+				<h3>目前进度</h3>
+				<ul>
+					<li>已购买云服务器</li>
+					<li>已购买域名</li>
+					<li>已完成备案</li>
+					<li>已部署博客</li>
+				</ul>
+				<h3>未完成项目</h3>
+				<ul>
+					<li>SSL加密证书</li>
+					<li>主页编写</li>
+					<li>主页Docker配置</li>
+				</ul>
+			</div>
+			<div>
+				<h2 id=clock></h2>
+			</div>
+			<div>
+				<h2 >
+					<a href="http://lichristmas.online:8090/">点击跳转我的博客Blog</a>
+				</h2>
+			</div>
+			
+			<div>
+				<h2 id="ADD">3+3</h2>
+				<p>浏览器中(Chrome, IE, Firefox) 使用 F12 来启用调试模式， 在调试窗口中点击 "Console" 菜单。</p>
+				<p> 测试：3+2</p>
+				<p id="SUM3+2"></p>
+			</div>
+		</div>
 		
-		<h2 id="ADD">3+3</h2>
-		<p>浏览器中(Chrome, IE, Firefox) 使用 F12 来启用调试模式， 在调试窗口中点击 "Console" 菜单。</p>
-		<p> 测试：3+2</p>
-		<p id="SUM3+2"></p>
+		
 	</body>
-	<script>
+	<script src="js/Main.js">
 		window.alert("请登录查看");//弹窗显示
 		document.getElementById("ADD").innerHTML="6";//获取ADD标签元素内容，并计算输出结果
 		document.write(Date()); //写入时间使用 document.write() 可以向文档写入内容 文档已完成加载后执行
+		DateTime=document.write(Date())
 		a = 5
 		b = 6
 		c=a+b;
 		console.log(c)
 		document.getElementById('SUM3+2').innerHTML=3+2
+		
+		
 	</script>
 </html>
