@@ -1,7 +1,8 @@
 services:
-  MyHomePage:
+  mhp:
     build: .
-    container_name: myhomepageimg
+    container_name: myhomepage
+	image: myhomepageimg
     restart: unless-stopped
     ports:
       - "80:80"
