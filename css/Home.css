@@ -8,6 +8,7 @@ body {
     font-family: sans-serif;
     background-size: cover;
     background-position: center;
+	background-image: url("../img/bingimg_20250217_UHD.jpg");
 }
 
 /* 针对#clock元素的样式 */
