@@ -1,18 +1,45 @@
 /* 基础页面布局和背景设置 */
-body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
-    background-size: cover;
-    background-position: center;
+body{
+	margin: 0; /* 移除默认的外边距 */
+	padding: 0; /* 移除默认的内边距 */
+	width: 100%; /* 设置宽度为100% */
+	height: 100%; /* 设置高度为100% */
+}
+.container {/* 页面容器 */
+    margin: 0; /* 移除默认的外边距 */
+    padding: 0; /* 移除默认的内边距 */
+    width: 100%; /* 设置宽度为100% */
+    height: 100%; /* 设置高度为100% */
+    overflow: auto; /* 如果内容超出视口大小则显示滚动条 */
+	display: flex; /* container容器设置为弹性盒子,haed,body,foot盒子才能弹性分布 */
+	flex-direction: column;/* container容器内的盒子元素书竖向排布 */
 	background-image: url("../img/bingimg_20250217_UHD.jpg");
+	
 }
 
-/* 针对#clock元素的样式 */
-#clock {
+.haed{/* 页面头部 */
+	width: 100%; /* 设置高度为100% 占父容器（页面容器）高度的100%*/
+	height: 10%;/* 占页面高度的10% 占父容器（页面容器）高高的10%*/
+	display: flex;
+	flex-direction: row;
+	background-color: black;
+}
+.bady{/* 页面主体 */
+	width: 100%; /* 设置高度为100% */
+	display: flex;
+	flex: 1;
+}
+.foot{/* 页面脚部 */
+	width: 100%; /* 设置高度为100% */
+	height: 10%;/* 占页面高度的10% 占父容器（页面容器）高高的10%*/
+	display: flex;
+	flex-direction: row;
+	background-color: black;
+
+}
+
+/* 针对#aboutme元素的样式 */
+#aboutme {
     /* 基础样式 */
     padding: 20px 40px;
     font-size: 2rem;
@@ -32,7 +59,7 @@ body {
 }
 
 /* 鼠标悬停时边缘发光且增大模糊 */
-#clock:hover {
+#aboutme:hover {
 		/* 毛玻璃效果 */
     box-shadow: 0 0 20px 6px rgba(255, 255, 255, 0.5);/* 鼠标碰到后,外边框变化最终值 */
 	backdrop-filter: blur(10px); /* 鼠标碰到后,毛玻璃的模糊度变化最终值 */
@@ -41,3 +68,24 @@ body {
 	
 	
 }
+.profilepicture{ /* 头像div*/
+	width: 20rem;/* 占据父容器(body)宽度的320px 1rem=16px */
+	height: 20rem;
+	margin: auto;/* 居中 */
+}
+.profilepicture img {/* 头像 */
+  /* 占据父容器宽高 */
+  width: 100%;
+  height: 100%;
+  
+  object-fit: cover; /* 可选：裁剪图片以适应容器 */
+  border-radius: 10rem;
+  
+}
+.briefintroduction{/* 简介 */
+	text-align: center;/* 文本居中 */
+}
+.personalizedsignature{/* 个性签名 */
+	text-align: center;/* 文本居中 */
+}
+
