@@ -1,19 +1,29 @@
 /* 基础页面布局和背景设置 */
+*{
+	margin: 0; /* 移除默认的外边距 */
+	padding: 0; /* 移除默认的内边距 */
+}
 body{
 	margin: 0; /* 移除默认的外边距 */
 	padding: 0; /* 移除默认的内边距 */
 	width: 100%; /* 设置宽度为100% */
 	height: 100%; /* 设置高度为100% */
 }
+div{
+	margin: 0;
+	padding: 0;
+	border: 0.0625rem,red;
+}
 .container {/* 页面容器 */
     margin: 0; /* 移除默认的外边距 */
     padding: 0; /* 移除默认的内边距 */
-    width: 100%; /* 设置宽度为100% */
-    height: 100%; /* 设置高度为100% */
+	width: 100vw;/* 适应浏览器窗口大小100% */
+	height: 100vh;/* 适应浏览器窗口大小100% */
     overflow: auto; /* 如果内容超出视口大小则显示滚动条 */
 	display: flex; /* container容器设置为弹性盒子,haed,body,foot盒子才能弹性分布 */
 	flex-direction: column;/* container容器内的盒子元素书竖向排布 */
 	background-image: url("../img/bingimg_20250217_UHD.jpg");
+	/* background-color: blue; *//* 测试布局用 */
 	
 }
 
@@ -22,29 +32,43 @@ body{
 	height: 10%;/* 占页面高度的10% 占父容器（页面容器）高高的10%*/
 	display: flex;
 	flex-direction: row;
-	background-color: black;
+	background-color: black;/* 测试布局用 */
+	
 }
-.bady{/* 页面主体 */
+.body{/* 页面主体 */
 	width: 100%; /* 设置高度为100% */
 	display: flex;
 	flex: 1;
+	flex-direction: column;
+	/* background-color: yellow *//* 测试布局用 */
+	
+	
 }
 .foot{/* 页面脚部 */
 	width: 100%; /* 设置高度为100% */
-	height: 10%;/* 占页面高度的10% 占父容器（页面容器）高高的10%*/
+	height: 10%;/* 占页面高度的10% 占父容器（页面容器）高度的10%*/
 	display: flex;
 	flex-direction: row;
-	background-color: black;
+	background-color: black;/* 测试布局用 */
 
+}
+#clock{
+	margin: auto;
 }
 
 /* 针对#aboutme元素的样式 */
 #aboutme {
     /* 基础样式 */
-    padding: 20px 40px;
+	margin: auto;
+    padding: 0;
+	width: 37.5rem;
+	height: 6.25rem;
     font-size: 2rem;
     color: white;
     text-align: center; /* 文本居中 */
+	display: flex;/* 弹性布局 */
+	justify-content: center; /* 子元素水平居中 */
+	align-items: center;     /* 子元素垂直居中 */
 
     /* 毛玻璃效果 */
     backdrop-filter: blur(1px); /* 初始毛玻璃模糊度 */
@@ -56,6 +80,10 @@ body{
      transition: box-shadow 0.3s ease, backdrop-filter 0.8s ease;
 			  /* box-shadow 0.3s为鼠标碰到毛玻璃元素外边框发光效果的过渡动画时间
 				 backdrop-filter 0.8s ease 为鼠标碰到毛玻璃元素模糊度的过渡动画时间 */
+}
+#aboutme h2{
+	margin: auto
+	/* background-color: brown; */
 }
 
 /* 鼠标悬停时边缘发光且增大模糊 */
@@ -69,8 +97,8 @@ body{
 	
 }
 .profilepicture{ /* 头像div*/
-	width: 20rem;/* 占据父容器(body)宽度的320px 1rem=16px */
-	height: 20rem;
+	width: 15rem;/* 占据父容器(body)宽度的320px 1rem=16px */
+	height: 15rem;
 	margin: auto;/* 居中 */
 }
 .profilepicture img {/* 头像 */
@@ -87,5 +115,14 @@ body{
 }
 .personalizedsignature{/* 个性签名 */
 	text-align: center;/* 文本居中 */
+}
+.task{
+	margin: auto;
+}
+.test{
+	text-align: center;/* 文本居中 */
+}
+.blog{
+	margin: auto;
 }
 
