@@ -125,4 +125,16 @@ div{
 .blog{
 	margin: auto;
 }
+.BGM{ /* BGM div */
+	margin: auto;/* 居中 */
+	display: flex;/* 设置为弹性盒子 */
+	flex-direction: row;/* 子元素按行排列 */
+	background-color: beige;/* 背景色-测试布局用 */
+	background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+	border-radius: 16px; /* 圆角弧度 */
+}
+.BGM img {
+	height: 3.375rem;/* 设置为和controls控件一样高 */
+}
+
 
