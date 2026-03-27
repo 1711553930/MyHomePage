@@ -29,10 +29,10 @@ div{
 
 .haed{/* 页面头部 */
 	width: 100%; /* 设置高度为100% 占父容器（页面容器）高度的100%*/
-	height: 10%;/* 占页面高度的10% 占父容器（页面容器）高高的10%*/
+	height: 8%;/* 占页面高度的10% 占父容器（页面容器）高高的10%*/
 	display: flex;
 	flex-direction: row;
-	background-color: black;/* 测试布局用 */
+	background-color:rgba(81,173,179,0.8);/* 测试布局用 */
 	
 }
 .body{/* 页面主体 */
@@ -46,10 +46,10 @@ div{
 }
 .foot{/* 页面脚部 */
 	width: 100%; /* 设置高度为100% */
-	height: 10%;/* 占页面高度的10% 占父容器（页面容器）高度的10%*/
+	height: 5%;/* 占页面高度的5% 占父容器（页面容器）高度的10%*/
 	display: flex;
 	flex-direction: row;
-	background-color: black;/* 测试布局用 */
+	background-color: rgba(81,173,179,0.8);/* 测试布局用 */
 
 }
 #clock{
@@ -111,10 +111,27 @@ div{
   
 }
 .briefintroduction{/* 简介 */
-	text-align: center;/* 文本居中 */
+	margin: auto;
+	border-style: groove;
+	border: 1px;
+	border: solid;
+	border-color: dodgerblue;
+	border-radius: 50px;
+	/* 毛玻璃效果 */
+	background-color:rgba(30, 144, 255, 0.2);
+	backdrop-filter: white(20px);
+	
 }
+.briefintroduction p{
+	padding: 1.25rem; 	
+}
+	
 .personalizedsignature{/* 个性签名 */
 	text-align: center;/* 文本居中 */
+	font-size: 100px;
+	font-family: cursive;
+	font-weight: bolder;
+
 }
 .task{
 	margin: auto;
